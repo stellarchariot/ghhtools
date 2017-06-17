@@ -8,7 +8,7 @@ def get_reddit():
     
     if not config_client_id:
         raise GHHConfigError("The Reddit API client_id has not been specified")
-    elif not config_client_secret:
+    if not config_client_secret:
         raise GHHConfigError("The Reddit API client_secret has not been specified")
     
     reddit = praw.Reddit(user_agent='Comment Extraction (by /u/stellarchariot)',
