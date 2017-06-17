@@ -4,6 +4,8 @@ Tools and utilities that help make it easier to manage the Game of Hip Hop (GHH)
 
 ## Getting Started
 
+### Quickstart
+
 On a Unix-like machine (e.g. a Mac or a Linux box):
 
 ```
@@ -14,7 +16,7 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Set the Reddit API client ID and client secret in the enviornment variables:
+Set the Reddit API client ID and client secret in your [environment variables](https://www.google.com.au/?q=how+to+set+environment+variable):
 
 - `REDDIT_API_CLIENT_ID`
 - `REDDIT_API_CLIENT_SECRET`
@@ -33,11 +35,11 @@ And visit the URL shown (the default is http://localhost:8080/) using a web brow
 
 You'll need to have the following installed and have a basic understanding of:
 
-- Git
-- Python
-- PIP
-- Flask
-- Virtualenv (optional, but highly recommended)
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/)
+- [PIP](https://pypi.python.org/pypi/pip)
+- [Flask](http://flask.pocoo.org/)
+- [Virtualenv](https://virtualenv.pypa.io/) (optional, but highly recommended)
 
 ## Running the tests
 
@@ -47,6 +49,8 @@ $ python -m unittest discover test/
 ```
 
 ## Built With
+
+Notable ingredients:
 
 * [Flask](http://flask.pocoo.org/) - The web framework used
 * [PIP](https://pypi.python.org/pypi/pip) - Dependency/package management
