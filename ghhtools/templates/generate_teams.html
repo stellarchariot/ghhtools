@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="pure-g">
+    <div class="pure-u-1">
+      <h2>Generate Teams</h2>
+      
+      {% if error %}
+      <p class="msg error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+      
+      <form class="pure-form">
+        <fieldset>
+          <label for="url">Thread URL: </label>
+          <input type="url" name="url" id="url" value="{{ url }}" size="80" />
+          <button type="submit" class="pure-button pure-button-primary" >Generate Teams</button>
+        </fieldset>
+      </form>
+      
+      <aside>
+        <p>Don't know what URL to use? Use any <a href="https://www.reddit.com/r/makinghiphop/search?q=GHH+sign+ups&restrict_sr=on&sort=new&t=all">Game of Hip Hop sign-up URL</a>.</p>
+        
+        <p>Here's an example URL to get you started: https://www.reddit.com/r/makinghiphop/comments/5y9qx5/ghh_vol_36_sign_ups_midnight_drive/</p>
+      </aside>
+  
+  <hr>
+  
+  {% if url %}
+  <p>Showing results for: <a href="{{url}}">{{ url }}</a></p>
+  {% endif %}
+  
+  {% if results %}
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <h2>Rappers</h2>
+      {% if not results.get('rappers') %}
+      <p>No producers found</p>
+      {% endif %}
+      <ul>
+      {% for rapper in results.get('rappers') %}
+        <li><a href="https://www.reddit.com/user/{{rapper}}">{{ rapper }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="pure-u-1-2">
+      <h2>Producers</h2>
+      {% if not results.get('producers') %}
+      <p>No producers found</p>
+      {% endif %}
+      <ul>
+      {% for producer in results.get('producers') %}
+        <li><a href="https://www.reddit.com/user/{{producer}}">{{ producer }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  
+    </div>
+</div>
+
+{% endblock %}

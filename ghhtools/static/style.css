@@ -1,0 +1,25 @@
+#page {
+    margin: 40px;
+}
+
+.error.msg {
+    background-color: #FF4136;
+    color: hsla(3, 100%, 25%, 1.0);
+    padding: 20px 10px;
+}
+
+.alert.error {
+
+}
+
+aside {
+    background: #1f8dd6;
+    margin: 1em 0;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+}
+
+aside a {
+    color: #fff;
+}
